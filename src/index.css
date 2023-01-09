@@ -75,3 +75,11 @@ header .logo {
 header .logo span {
   margin-left: 0.5rem;
 }
+
+.article {
+  margin: 4rem 0;
+}
+
+.post-wrapper {
+  width: 100%;
+}
