@@ -83,3 +83,14 @@ header .logo span {
 .post-wrapper {
   width: 100%;
 }
+
+.code {
+  position: relative;
+}
+
+.copy-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 5;
+}

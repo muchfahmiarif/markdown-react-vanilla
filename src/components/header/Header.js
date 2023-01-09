@@ -1,5 +1,5 @@
 import React from "react";
-import { LogoIcon, MoonIcon } from "../../assets/ixons";
+import { LogoIcon, MoonIcon } from "../../assets/icons";
 
 const Header = () => {
   return (
