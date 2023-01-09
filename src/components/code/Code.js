@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { ThemeContext } from "../../App";
 import { CopyIcon, PasteIcon } from "../../assets/icons";
 
 const Code = ({ children, language }) => {
   const [copied, setCopied] = useState(false);
+  const { isDark } = useContext(ThemeContext);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,7 +22,7 @@ const Code = ({ children, language }) => {
       <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
         <button className="icon copy-icon">{copied ? <PasteIcon /> : <CopyIcon />}</button>
       </CopyToClipboard>
-      <SyntaxHighlighter language={language} style={materialDark}>
+      <SyntaxHighlighter language={language} style={isDark ? materialDark : materialLight}>
         {children}
       </SyntaxHighlighter>
     </div>
