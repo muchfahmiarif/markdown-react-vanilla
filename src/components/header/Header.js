@@ -4,9 +4,9 @@ import { LogoIcon, MoonIcon } from "../../assets/ixons";
 const Header = () => {
   return (
     <header className="header">
-      <div class="container">
-        <div class="logo-wrapper">
-          <div class="logo">
+      <div className="container">
+        <div className="logo-wrapper">
+          <div className="logo">
             <LogoIcon />
             <span>JS Snippet</span>
           </div>
